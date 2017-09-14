@@ -1,0 +1,68 @@
+.weather-container {
+  margin: 45px 0 0;
+}
+
+.weather_item {
+
+  @include media($xs) {
+    @include span-columns(6);
+    margin-bottom: 30px;
+  }
+  @include media($sm-up) {
+    @include span-columns(2 of 10);
+
+  }
+  text-align: center;
+  &:last-child {
+    @include omega;
+  }
+
+  img {
+    height: 50px;
+  }
+
+  h3 {
+    line-height: 1;
+    font-size: rem(20);
+    font-weight: 500;
+    margin: 0 0 6px;
+    padding: 0;
+  }
+
+  h5 {
+    line-height: 1;
+    font-size: rem(11);
+    font-weight: 400;
+    color: #B1B1B1;
+    margin: 0 0 6px;
+    padding: 0;
+  }
+
+  h4 {
+    line-height: 1;
+    font-size: rem(14);
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.weather-type {
+    @include media($xs) {
+      @include span-columns(12);
+    }
+    img {
+      margin: -12px 0 -2px;
+    }
+  }
+  &.temperature {
+    h4 {
+      margin-top: 21px;
+    }
+  }
+  &.visibility,
+  &.winddirection {
+    @include media($xs) {
+      @include omega;
+    }
+  }
+}

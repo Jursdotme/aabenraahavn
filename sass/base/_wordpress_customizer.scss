@@ -1,0 +1,15 @@
+.content_shadow_0 {
+  box-shadow: none;
+}
+
+.content_shadow_1 {
+  @include shadow-2dp();
+}
+
+.content_shadow_2 {
+  @include shadow-4dp();
+}
+
+.content_shadow_3 {
+  @include shadow-6dp();
+}

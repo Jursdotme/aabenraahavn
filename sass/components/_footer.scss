@@ -1,0 +1,33 @@
+.footer {
+  background-color: $brand-color-1;
+  .footer-inner {
+    @include secondthought-container;
+    padding: $gutter $gutter/2;
+    display: flex;
+    justify-content: space-between;
+        align-items: center;
+  }
+
+  .logo {
+    flex: 0 1 auto;
+    width: 150px;
+  }
+
+  .address {
+    flex: 0 1 auto;
+    font-style: normal;
+    h2, p, a {
+      color: #fff;
+      font-size: 0.75rem;
+    }
+    h2 {
+      font-weight: 700;
+    }
+  }
+  .social {
+    .fa {
+      font-size: 1.5rem;
+      margin-right: 11px;
+    }
+  }
+}

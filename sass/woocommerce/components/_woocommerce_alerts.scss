@@ -1,0 +1,23 @@
+.woocommerce-message,
+.woocommerce-info {
+  @extend %flash-success;
+
+  .button.wc-forward {
+    @include btn($brand-color-1, #fff, true);
+
+    display: inline-block;
+    float: right;
+    margin-top: -6px;
+
+    &:after {
+      margin-left: 5px;
+      content: '\f061';
+      font: normal normal normal 14px/1 FontAwesome;
+    }
+  }
+}
+
+.woocommerce-error {
+  @extend %flash-error;
+  list-style-type: none;
+}

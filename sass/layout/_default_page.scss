@@ -1,0 +1,15 @@
+.page,
+.error404 {
+  main {
+    @include secondthought-container;
+    @include pad(0 $gutter/2);
+    section {
+      @include span-columns(12);
+    }
+  }
+}
+
+.accordion>li>a {
+  background: $brand-color-1;
+  border-radius: 2px;
+}

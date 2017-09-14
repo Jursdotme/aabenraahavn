@@ -1,0 +1,83 @@
+.news,
+.archive,
+.single-post,
+.search {
+  main {
+    @include secondthought-container;
+    @include pad(97px $gutter/2 $gutter $gutter/2);
+    section {
+      @include media($sm-up) {
+        @include span-columns(9);
+      }
+      @include media($xs) {
+        @include span-columns(12);
+      }
+      h1 {
+        margin-bottom: $gutter;
+      }
+    }
+  }
+}
+
+.news,
+.archive {
+  .post {
+    display: flex;
+    @include media($sm-up) {
+      flex-direction: row;
+    }
+    @include media($xs) {
+      flex-direction: column;
+    }
+    margin-bottom: $gutter;
+    border-bottom: 1px solid #F7F7F7;
+    padding-bottom: $gutter;
+    .read-more {
+      float: right;
+    }
+  }
+}
+.post-image {
+  @include media($sm-up) {
+    flex: 1 1 25%;
+    margin-right: $gutter;
+  }
+  @include media($xs) {
+    flex: 1 1 content;
+  }
+  img {
+    display: block;
+    border-radius: 2px;
+    @include shadow-2dp;
+    width: 100%;
+    max-width: none;
+    @include media($xs) {
+      margin-bottom: $gutter;
+    }
+  }
+}
+.post-content {
+  @include media($sm-up) {
+    flex: 1 1 75%;
+  }
+  @include media($xs) {
+    flex: 1 1 content;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.instagram {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    width: 20%;
+    float: left;
+  }
+  a, img {
+    display: block;
+  }
+}

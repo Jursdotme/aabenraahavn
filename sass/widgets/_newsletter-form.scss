@@ -1,0 +1,29 @@
+#mc_embed_signup_scroll {
+  display: flex;
+  h2 {
+    flex: 1;
+  }
+}
+
+#mce-EMAIL,
+.mc-field-group {
+  flex: 1;
+}
+
+#mce-responses {
+  flex: 0;
+}
+
+.mc-field-group {
+  margin-right: $gutter;
+}
+
+.mc-field-group > input {
+  flex: 1;
+  margin-right: $gutter;
+  height: 36px;
+}
+
+#mc-embedded-subscribe {
+  flex: initial;
+}

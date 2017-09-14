@@ -1,0 +1,108 @@
+.desktop-navigation-container {
+  @include secondthought-container;
+}
+
+%top-lvl-link {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  > a {
+    @include  btn(#fff, $brand-color-1, false);
+    font-family: $header-font;
+    font-size: 16px;
+    //display: block;
+    //padding: 20px 15px;
+    //color: $base-font-color;
+    //text-transform: uppercase;
+    //font-weight: 500;
+    //font-size: 14px;
+    //
+    &:hover {
+      background-color: rgba(#fff, 0.3);
+    }
+  }
+}
+
+.desktop-navigation {
+  @include span-columns(10);
+  margin-top: 58px;
+  @include media($navigation-breakpoint-up) {
+    display: block;
+  }
+  @include media($navigation-breakpoint-down) {
+    display: none;
+  }
+
+  > ul > li {
+    padding: 8px 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .menu-item-has-children > {
+      ul {
+        //display: none;
+        position: absolute;
+        border-radius: 0 0 2px 2px;
+        @include shadow-2dp();
+        z-index: -1;
+        top: 46px;
+        padding: 10px 0;
+        background: #fff;
+        opacity: 0;
+        overflow: hidden;
+        transform-origin: 0 0;
+        transform: scale(0);
+
+        will-change: transform;
+        transition: transform 0.3s $animation-curve-fast-out-slow-in,
+                    opacity 0.2s $animation-curve-fast-out-slow-in;
+        z-index: -1;
+        &.is-visible {
+          display: block;
+          opacity: 1;
+          transform: scale(1);
+          z-index: 999;
+        }
+      }
+    }
+
+    &.sub-menu {
+      li {
+        a {
+          color: $base-font-color;
+          font-size: 14px;
+          padding: 0 16px;
+          height: 36px;
+          line-height: 36px;
+          white-space: nowrap;
+          display: block;
+          border: none;
+          &:hover {
+            background: $grey-lighter;
+          }
+        }
+      }
+    }
+  }
+
+  #navigation-menu {
+    float: right;
+
+    > li {
+      @extend %top-lvl-link;
+    }
+  }
+}
+
+.logo_top .logo {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

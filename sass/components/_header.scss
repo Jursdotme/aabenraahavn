@@ -1,0 +1,42 @@
+.header {
+  background: $brand-color-1;
+  border-top: 5px solid #fff;
+  @include shadow-2dp();
+  position: relative;
+  z-index: 1000;
+}
+.header-inner {
+  @include secondthought-container;
+  @include pad(0 $gutter/2);
+  position: relative;
+  .logo {
+    padding-top: 35px;
+    padding-bottom: 33px;
+    @include media($xs) {
+      @include span-columns(12);
+    }
+
+    @include media($sm-up) {
+      @include span-columns(2);
+    }
+
+
+    a {
+      display: block;
+
+    }
+    img {
+      max-width: 129px;
+      width: 100%;
+      display: block;
+
+      @include media($xs) {
+
+      }
+
+      @include media($sm-up) {
+
+      }
+    }
+  }
+}

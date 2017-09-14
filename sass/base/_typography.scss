@@ -1,0 +1,266 @@
+@import url('//fonts.googleapis.com/css?family=Roboto:400,900,700italic,900italic,700,500italic,500,400italic,300italic,300,100,100italic|Montserrat:400,700');
+
+$header-font: 'Montserrat', sans-serif;
+$body-font: 'Roboto', sans-serif;
+
+html {
+  font-size: $base-font-size; // Scale typography on mobile
+  line-height: 1.5;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $body-font;
+
+  //-webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin: 0 0 .6875rem;
+  color: $base-header-color;
+  font-weight: 700;
+  font-family: $header-font;
+
+  @include media($sm-down) {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  @include media($md) {
+    font-size: 2.5rem;
+    line-height: 1.125;
+  }
+  @include media($lg) {
+    font-size: 2.5rem;
+    line-height: 1.125;
+  }
+}
+
+h2 {
+  margin: 0 0 .6875rem;
+  color: $base-header-color;
+  font-weight: 400;
+  font-family: $header-font;
+
+  @include media($sm-down) {
+    font-size: 1.625rem;
+    line-height: 1.15384615;
+  }
+  @include media($md) {
+    font-size: 2rem;
+    line-height: 1.125;
+  }
+  @include media($lg) {
+    font-size: 2rem;
+    line-height: 1.125;
+  }
+
+}
+
+h3 {
+  margin: 0 0 .6875rem;
+  color: $base-header-color;
+  font-weight: 400;
+  font-family: $header-font;
+
+  @include media($sm-down) {
+    font-size: 1.375rem;
+    line-height: 1.13636364;
+  }
+  @include media($md) {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+  @include media($lg) {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+}
+
+h4 {
+  margin: 0 0 .6875rem;
+  color: $base-header-color;
+  font-weight: 400;
+  font-family: $header-font;
+
+  @include media($sm-down) {
+    font-size: 1.125rem;
+    line-height: 1.11111111;
+  }
+  @include media($md) {
+    font-size: 1.125rem;
+    line-height: 1.22222222;
+  }
+  @include media($lg) {
+    font-size: 1.125rem;
+    line-height: 1.22222222;
+  }
+
+}
+
+p {
+  // line-height: 1.5rem;
+  font-size: 1rem; // same as $base-font-size
+  // font-family: $body-font;
+
+  &.date {
+    margin-bottom: .3rem;
+    color: transparentize($base-font-color, .6);
+    font-style: italic;
+    font-size: .9rem;
+    // font-family: $body-font;
+  }
+
+  &.author {
+    // font-family: $body-font;
+  }
+
+  &.lead {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
+}
+
+hr {
+  margin: $base-line-height 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid $base-border-color;
+  border-left: 0;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+
+  @include transition(color .1s linear);
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    color: $hover-link-color;
+  }
+
+  .read-more {
+    position: relative;
+    display: inline-block;
+    margin-left: .2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8rem;
+    // font-family: $body-font;
+
+    span {
+      position: absolute;
+      top: -1px;
+      right: -12px;
+      font-style: normal;
+      font-size: 1.5rem;
+      // font-family: $body-font;
+    }
+  }
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+blockquote {
+  margin: $base-line-height 0;
+  padding-left: ($base-font-size * $base-line-height) / 2;
+  border-left: 2px solid $base-border-color;
+  color: tint($base-font-color, 15%);
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: floor($computed-line-height * .75);
+}
+
+dt,
+dd {
+  line-height: $base-line-height;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+.display-1 {
+  font-size: 90px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.display-2 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.display-3 {
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.display-4 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.simplePullQuote {
+  font-family: $header-font;
+  max-width: none;
+  margin: 0;
+  float: left;
+  background: none;
+  margin: $gutter/6 $gutter 0 0;
+  border-top: 5px solid $brand-color-1;
+  border-bottom: 5px solid $brand-color-1;
+  padding: 0px 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 800;
+  color: #000;
+  max-width: 300px;
+  padding: $gutter/2 0;
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+.colorcontrast {
+  opacity: 0.54;
+}

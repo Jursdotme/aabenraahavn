@@ -1,0 +1,169 @@
+fieldset {
+  margin: 0 0 1.5rem;
+  padding: $gutter;
+  border: 1px solid #e4e4e4;
+  background: #fafafa;
+  border-radius: 2px;
+  @include shadow-2dp();
+  @include span-columns(12);
+}
+
+legend {
+    font-weight: 700;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-size: 1rem;
+  font-family: $body-font;
+}
+
+label {
+  margin-bottom: $base-line-height/4;
+  font-weight: bold;
+
+  &.required:after {
+    content: '*';
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+textarea,
+#{$all-text-inputs},
+select[multiple=multiple] {
+  margin-bottom: $base-line-height/2;
+  padding: $gutter/6 $gutter/4;
+  width: 100%;
+  border-radius: $form-border-radius;
+  box-shadow: $form-box-shadow;
+  font-size: 1rem;
+  font-family: $body-font;
+
+background: #FFFFFF;
+border: 1px solid #EFEFEF;
+border-radius: 2px;
+height: 36px;
+
+  @include box-sizing(border-box);
+  @include transition(border-color);
+
+  &:hover {
+    border-color: $form-border-color-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $form-border-color-focus;
+    box-shadow: $form-box-shadow-focus;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+[type='search'] {
+  @include appearance(none);
+}
+
+[type='checkbox'],
+[type='radio'] {
+  display: inline;
+  margin-right: $base-line-height/4;
+}
+
+[type='file'] {
+  margin-bottom: $base-line-height/2;
+  padding-bottom: ($base-line-height/3);
+  width: 100%;
+}
+
+select {
+  margin-bottom: $base-line-height;
+  max-width: 100%;
+  width: auto;
+}
+
+.wpcf7-form p {
+    @include span-columns(12);
+    span.wpcf7-not-valid-tip {
+        color: $error-color;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    &.half {
+      @include span-columns(12);
+      @include media($md-up) {
+        @include span-columns(6);
+      }
+    }
+
+    &.quarter {
+      @include span-columns(12);
+      @include media($md-up) {
+        @include span-columns(3);
+      }
+    }
+
+    &.threequarter {
+      @include span-columns(12);
+      @include media($md-up) {
+        @include span-columns(9);
+      }
+    }
+
+    &.third {
+      @include span-columns(12);
+      @include media($md-up) {
+        @include span-columns(4);
+      }
+    }
+
+    &.twothird {
+      @include span-columns(12);
+      @include media($md-up) {
+        @include span-columns(8);
+      }
+    }
+
+    &.full {
+      @include span-columns(12);
+    }
+
+    &.last {
+      @include media($md-up) {
+        @include omega();
+      }
+    }
+}
+
+.wpcf7-submit {
+    @include btn($brand-color-1, #fff, true);
+}
+
+.wpcf7-response-output {
+    &.wpcf7-validation-errors {
+        border: 0;
+        @extend %flash-alert;
+        margin: 0;
+        @include span-columns(12);
+    }
+    &.wpcf7-mail-sent-ok {
+        border: 0;
+        @extend %flash-success;
+        margin: 0;
+        @include span-columns(12);
+    }
+}
+
+p.wysija-paragraph {
+    width: 42%;
+    float: left;
+    margin-right: 2%;
+}

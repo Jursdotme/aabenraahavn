@@ -1,0 +1,76 @@
+#skibsliste {
+  &.full {
+    .scroll_wrapper {
+      overflow-x: auto;
+      table {
+        min-width: 1024px;
+      }
+    }
+  }
+  &.compact {
+    .scroll_wrapper {
+      table {
+        @include media($sm-down) {
+          th:nth-child(2), td:nth-child(2), th:nth-child(5), td:nth-child(5) {
+            display: none;
+          }
+        }
+      }
+    }
+    p.descriptions {
+        display: none;
+    }
+  }
+  .no-ships {
+    text-align: center;
+  }
+  table {
+    border-radius: 3px;
+
+    thead th {
+      padding:8px 3px;
+      background: $brand-color-1;
+      color: #fff;
+      font-size: 11px;
+      &:first-child {
+        border-radius: 3px 0 0 0;
+        padding:8px 3px 8px 6px;
+      }
+      &:last-child {
+        border-radius: 0 3px 0 0;
+        padding:8px 6px 8px 3px;
+      }
+    }
+    tbody td {
+      padding:8px 2px;
+      font-size: 12px;
+      &:first-child {
+        padding:8px 3px 8px 6px;
+      }
+      &:last-child {
+        padding:8px 6px 8px 3px;
+      }
+    }
+  }
+  p {
+    font-size: 14px;
+    em {
+      color:#ccc;
+    }
+  }
+  a.button.print {
+    margin: 12px 0 ;
+    &:before {
+      font-family: FontAwesome;
+      content: '\f02f';
+      margin-right:6px;
+    }
+  }
+}
+
+@media print {
+  @page { size: landscape; }
+  td, th {
+     font-size:12px;
+  }
+}

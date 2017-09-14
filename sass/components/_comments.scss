@@ -1,0 +1,79 @@
+$comment-gutter: 1.4rem;
+$comment-image-padding: 0;
+$comment-image-width: 4rem;
+$comment-color: $base-font-color;
+$comment-background: lighten($base-accent-color, 15);
+$comment-detail-color: transparentize($comment-color, .5);
+$comment-image-vert-alignment: top;
+
+.comment-body {
+  display: table;
+  margin-bottom: $gutter;
+  padding-bottom: 1rem;
+  width: 100%;
+  border-bottom: 1px solid transparentize($comment-color, .9);
+
+  .comment-author.vcard,
+  .comment-content {
+    display: table-cell;
+    vertical-align: $comment-image-vert-alignment;
+  }
+
+  .comment-author.vcard {
+    padding-right: $comment-gutter;
+
+    > img {
+      display: block;
+      padding: $comment-image-padding;
+      max-width: none;
+      width: $comment-image-width;
+      height: auto;
+      border-radius: $base-border-radius;
+      background: $comment-background;
+    }
+
+    .comment-reverse-order & {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .comment-content {
+    width: 100%;
+
+    h4 {
+      margin-bottom: .5rem;
+      font-size: 1rem;
+    }
+
+    p {
+      margin-bottom: .5rem;
+
+      &.comment-detail {
+        color: $comment-detail-color;
+        font-style: italic;
+        font-size: .9rem;
+      }
+    }
+  }
+}
+
+.comments ul,
+.comments .children {
+  margin-left: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.comment-respond {
+  .form-allowed-tags {
+    display: none;
+  }
+
+  #submit {
+    @include btn($brand-color-1, #fff, true);
+  }
+}

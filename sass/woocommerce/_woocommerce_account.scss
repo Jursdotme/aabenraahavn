@@ -1,0 +1,199 @@
+.page-template-default.woocommerce-account {
+  main {
+    @include secondthought-container;
+    @include pad($gutter*3 $gutter);
+
+    section {
+      @include media($sm-down) {
+        @include span-columns(12);
+        @include shift(0);
+      }
+
+      @include media($md-up) {
+        @include span-columns(12);
+        @include shift(0);
+      }
+    }
+  }
+
+  .col-1,
+  .col-2 {
+    @include media($xs) {
+      @include span-columns(6);
+    }
+
+    @include media($sm) {
+      @include span-columns(4);
+    }
+
+    @include media($md-up) {
+      @include span-columns(3);
+    }
+  }
+
+  .shop_table {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 4px;
+    background-clip: padding-box;
+    box-shadow: 0 1px 2px 0 #fff;
+
+    thead th {
+      padding: $gutter;
+      border-right: 1px dotted #e4e4e3;
+      border-bottom: 0;
+      vertical-align: middle;
+      text-transform: uppercase;
+
+      @include media($xs) {
+        padding: $gutter/3 $gutter/4;
+      }
+
+      @include media($sm-up) {
+        padding: $gutter/2;
+      }
+    }
+
+    th {
+      padding: $gutter;
+      vertical-align: middle;
+      text-transform: uppercase;
+
+      @include media($xs) {
+        padding: $gutter/3 $gutter/4;
+      }
+
+      @include media($sm-up) {
+        padding: $gutter/2;
+      }
+    }
+
+    td {
+      border-right: 1px solid #e6e6e6;
+      vertical-align: middle;
+      text-align: left;
+
+      @include media($xs) {
+        padding: $gutter/3 $gutter/4;
+      }
+
+      @include media($sm-up) {
+        padding: $gutter/2;
+      }
+
+      &.order-total .amount {
+        font-weight: 700;
+      }
+
+      &.order-actions a {
+        display: block;
+        margin-right: 5px;
+        text-align: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .variation {
+        margin: 0;
+        font-style: italic;
+
+        dt {
+          float: left;
+          clear: left;
+          margin-right: .236rem;
+        }
+
+        dd {
+          margin-bottom: 0;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .order-number,
+    .order-status {
+      @include media($sm-down) {
+        display: none;
+      }
+
+      @include media($md-up) {
+        display: table-cell;
+      }
+    }
+  }
+
+  .order-info {
+    mark {
+      padding: 2px 5px;
+      border-radius: $base-border-radius;
+      background: tint($brand-color-1, 30%);
+      color: #fff;
+    }
+  }
+
+  .form-row {
+    @include span-columns(12);
+  }
+
+  // 1 row fields
+  .form-row-wide {
+    @include span-columns(12);
+  }
+
+  // 2 row fields
+  .form-row-first {
+    @include media($xs) {
+      @include span-columns(12);
+    }
+
+    @include media($sm-up) {
+      @include span-columns(6);
+    }
+  }
+
+  .form-row-last {
+    @include media($xs) {
+      @include span-columns(12);
+    }
+
+    @include media($sm-up) {
+      @include span-columns(6);
+      @include omega();
+    }
+
+    @include omega();
+  }
+
+  fieldset {
+    margin-bottom: $gutter;
+  }
+
+  // Right fields,
+  .col-2,
+  #billing_last_name_field,
+  #billing_city_field,
+  #billing_phone_field,
+  #shipping_last_name_field,
+  #shipping_city_field,
+  #shipping_phone_field {
+    @include omega();
+  }
+
+  .login {
+    .button {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .inline {
+      display: inline-block;
+    }
+  }
+}

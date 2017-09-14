@@ -1,0 +1,94 @@
+// Sizes
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
+$header-line-height: $base-font-size * 1.25;
+$computed-line-height: floor($base-font-size * $base-line-height); // ~20px
+$base-border-radius: 3px;
+
+// Colors
+
+// Brand Colors
+$brand-color-1: #12202f;
+$brand-color-2: #008fe4;
+$brand-color-3: #005394;
+
+// Grays
+$gray          : lighten(desaturate($brand-color-1, 65%), 30%);
+$grey-lightest : tint($gray, 92%);
+$grey-lighter  : tint($gray, 75%);
+$grey-light    : tint($gray, 50%);
+
+$grey-dark     : shade($gray, 50%);
+$grey-darker   : shade($gray, 75%);
+$grey-darkest  : shade($gray, 92%);
+
+
+// Flash Colors
+$alert-color: #ffd000; // A yellow/orange color
+$error-color: #e9513c; // A red color
+$notice-color: #91d2e1; // A Blue color
+$success-color: #b6c844; // A green color
+
+// Light Flash Colors
+$light-alert-color: tint($alert-color, 50%);
+$light-error-color: tint($error-color, 50%);
+$light-notice-color: tint($notice-color, 50%);
+$light-success-color: tint($success-color, 50%);
+
+// Background Color
+$base-background-color: #fff;
+
+// Font Colors
+$base-font-color: $grey-darker;
+$base-accent-color: $brand-color-1;
+$base-header-color: tint($grey-darker, 10%);
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Border color
+$base-border-color: $grey-light;
+
+// Nice to have colors
+$facebook-color: #3b5998;
+$twitter-color: #4099ff;
+$google-plus-color: #da4735;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.12), inset 0px 1px 2px 0px rgba(0,0,0,0.24);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), .7);
+
+/* BUTTON */
+/**
+ *
+ * Dimensions
+ *
+ */
+$button-min-width: 64px;
+$button-height: 36px;
+$button-padding: 8px;
+$button-margin: 4px;
+$button-border-radius: 2px;
+
+$button-fab-size: 56px;
+$button-fab-size-mini: 40px;
+$button-fab-font-size: 24px;
+
+$button-icon-size: 32px;
+$button-icon-size-mini: 24px;
+
+
+/* ANIMATION */
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
+$animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
+$animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1);
+
+$animation-curve-default: $animation-curve-fast-out-slow-in;

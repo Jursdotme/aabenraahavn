@@ -1,0 +1,18 @@
+.medarbejder {
+  @include span-columns(6);
+  padding: $gutter/2;
+  @include omega(2n);
+  @include shadow-2dp;
+  margin-bottom: $gutter/2;
+  background-color: #fff;
+  .name {
+    font-size: 1.2rem
+  }
+  .title {
+    font-size: 1rem;
+    display: block;
+  }
+  .email {
+    display: block;
+  }
+}
